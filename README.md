@@ -4,11 +4,6 @@ This project provides tools for analyzing home price data across various regions
 
 ## Features
 
-### Java Component
-- Reading and parsing data from a file into a matrix for processing.
-- Interactive menu for performing various analyses, such as calculating average home prices.
-- Comparing home prices across different years to analyze trends.
-
 ### Python Component
 - Reading and processing home price data from a CSV file.
 - Training a linear regression model to predict future home prices.
