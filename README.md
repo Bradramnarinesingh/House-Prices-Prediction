@@ -14,10 +14,6 @@ This project provides tools for analyzing home price data across various regions
 
 ### Prerequisites
 
-- **Java Component:**
-  - Java Development Kit (JDK) installed on your system.
-  - Basic understanding of Java and command-line operations.
-
 - **Python Component:**
   - Python installed on your system.
   - Required Python libraries: pandas, scikit-learn, matplotlib, Pillow.
