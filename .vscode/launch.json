@@ -1,0 +1,20 @@
+{
+    "type": "java",
+    "name": "Launch Current File",
+    "request": "launch",
+    "mainClass": "${file}",
+    "projectName": "your_project_name_here",
+    "classPaths": [
+      "./lib/weka.jar"  // Adjust the path to where your Weka jar is
+    ],
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Peel_House_Prediction",
+            "request": "launch",
+            "mainClass": "Peel_House_Prediction",
+            "projectName": "House-Prices-Prediction_6f9eb843"
+        }
+    ]
+  }
+  
