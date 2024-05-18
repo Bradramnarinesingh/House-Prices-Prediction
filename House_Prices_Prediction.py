@@ -53,6 +53,7 @@ def visualize_predictions(years):
     # Add exact labels for predicted prices
     for year, price in zip(future_years, future_prices):
         plt.text(year, price, f'${price:.2f}', ha='center', va='bottom')
+        plt.annotate(f'(${price:.2f})', (year, price), textcoords="offset points", xytext=(0,10), ha='center')
     
     plt.xlabel('Year')
     plt.ylabel('Total All Home Types Price')
