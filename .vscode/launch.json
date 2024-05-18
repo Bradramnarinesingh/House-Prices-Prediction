@@ -8,13 +8,20 @@
       "./lib/weka.jar"  // Adjust the path to where your Weka jar is
     ],
     "configurations": [
-        {
-            "type": "java",
-            "name": "Peel_House_Prediction",
-            "request": "launch",
-            "mainClass": "Peel_House_Prediction",
-            "projectName": "House-Prices-Prediction_6f9eb843"
-        }
+      {
+        "type": "java",
+        "name": "HousePricesPrediction",
+        "request": "launch",
+        "mainClass": "HousePricesPrediction",
+        "projectName": "House-Prices-Prediction_6f9eb843"
+      },
+      {
+        "type": "java",
+        "name": "Peel_House_Prediction",
+        "request": "launch",
+        "mainClass": "Peel_House_Prediction",
+        "projectName": "House-Prices-Prediction_6f9eb843"
+      }
     ]
   }
   
