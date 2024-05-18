@@ -3,13 +3,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 import matplotlib
-matplotlib.use('TkAgg')  # Set the backend for matplotlib
+matplotlib.use('Agg')  # Use the 'Agg' backend for headless environments
 import matplotlib.pyplot as plt
 
-plt.ion()  # Ensure interactive mode is on
-
 # Load the data
-csv_file_path = "/mnt/data/Average_Resale_Home_Prices.csv"
+csv_file_path = "Average_Resale_Home_Prices.csv"
 data = pd.read_csv(csv_file_path)
 
 # Filter necessary columns and handle missing values if any
@@ -51,12 +49,18 @@ def visualize_predictions(years):
     plt.figure(figsize=(10, 6))
     plt.plot(historical_years, historical_prices, label='Historical Prices', marker='o')
     plt.plot(future_years, future_prices, label='Predicted Prices', marker='x')
+    
+    # Add exact labels for predicted prices
+    for year, price in zip(future_years, future_prices):
+        plt.text(year, price, f'${price:.2f}', ha='center', va='bottom')
+    
     plt.xlabel('Year')
     plt.ylabel('Total All Home Types Price')
     plt.title('House Price Predictions')
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig('house_price_predictions.png')
+    print("Plot saved as 'house_price_predictions.png'")
 
 # Menu to input a year and exit the program
 def menu():
